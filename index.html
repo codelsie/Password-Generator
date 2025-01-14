@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <div class="container mx-auto p-6">
+        <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+            <h1 class="text-3xl font-semibold text-center">Password Generator</h1>
+            <div class="mt-4">
+                <label for="length" class="block text-sm font-medium">Password Length</label>
+                <input type="number" id="length" value="12" min="6" max="20" class="mt-2 w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="mt-4 flex justify-between">
+                <div>
+                    <label class="text-sm font-medium">Include Uppercase</label>
+                    <input type="checkbox" id="uppercase" checked>
+                </div>
+                <div>
+                    <label class="text-sm font-medium">Include Numbers</label>
+                    <input type="checkbox" id="numbers" checked>
+                </div>
+                <div>
+                    <label class="text-sm font-medium">Include Symbols</label>
+                    <input type="checkbox" id="symbols" checked>
+                </div>
+            </div>
+            <button id="generate" class="mt-6 w-full bg-blue-500 text-white p-2 rounded">Generate Password</button>
+            <div class="mt-4">
+                <input type="text" id="password" class="w-full p-2 border border-gray-300 rounded" readonly>
+            </div>
+            <div class="mt-2 flex justify-between items-center">
+                <span id="strengthText" class="text-sm"></span>
+                <button id="copy" class="bg-green-500 text-white p-2 rounded">Copy</button>
+            </div>
+            <!-- Updated 3-column layout -->
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="feature-card">
+                    <h3 class="font-semibold">Length</h3>
+                    <p>Longer passwords are more secure (12+ characters).</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="font-semibold">Character Variety</h3>
+                    <p>Include uppercase, lowercase, numbers, and symbols.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="font-semibold">Uniqueness</h3>
+                    <p>Use different passwords for different accounts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
