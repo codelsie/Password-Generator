@@ -1,4 +1,5 @@
-#Password Generator
+# Password Generator
+
 This is a Password Generator web application built with HTML, CSS, JavaScript, and styled using Tailwind CSS. The application allows users to generate strong, random passwords with customizable options such as length, character sets (uppercase, lowercase, numbers, and symbols), and includes a strength indicator.
 
 ## Screenshot
